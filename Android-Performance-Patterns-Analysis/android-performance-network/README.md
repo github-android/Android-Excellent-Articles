@@ -1,4 +1,4 @@
-﻿Android性能优化之移动端网络优化
+Android性能优化之移动端网络优化
 ====
 一个网络请求可以简单分为**连接服务器** -> **获取数据**两个部分。</br>
 其中连接服务器前还包括 DNS 解析的过程；获取数据后可能会对数据进行缓存。
@@ -64,7 +64,22 @@ Http 1.1 默认启动了 keep-alive。对于 Android 来说默认情况下 HttpU
 3. 多连接</br>
 对于较大文件，如大图片、文件下载可考虑多连接。 需要控制请求的最大并发量，毕竟移动端网络受限。
  
-四、监控</br>
+## 四、监控 ##
 优化需要通过数据对比才能看出效果，所以监控系统必不可少，通过前后端的数据监控确定调优效果。
  
 注：服务器部署方面的优化有参考手 Q 和 QZone 去年的技术分享。
+
+
+>以下是网络优化中一些客户端和服务器端需要尽量遵守的准则：
+
+* 图片必须缓存，最好根据机型做图片做图片适配
+* 所有http请求必须添加httptimeout
+* 开启gzip压缩
+* api接口数据以json格式返回，而不是xml或html
+* 根据http头信息中的Cache-Control及expires域确定是否缓存请求结果。
+* 确定网络请求的connection是否keep-alive
+* 减少网络请求次数，服务器端适当做请求合并。
+* 减少重定向次数
+* api接口服务器端响应时间不超过100ms
+
+google正在做将移动端网页速度降至1秒的项目，关注中[https://developers.google.com/speed/docs/insights/mobile](https://developers.google.com/speed/docs/insights/mobile)
