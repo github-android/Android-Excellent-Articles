@@ -21,6 +21,7 @@
 - **DDMS（Heap&Allocation Tracker）**
 
 Heap查看堆的分配情况：
+
 ![ddms.jpg](images/ddms.jpg)
 
 主要关注两项数据：
@@ -31,6 +32,7 @@ Heap查看堆的分配情况：
 **注：**如果进行反复操作，或堆的大小一直增加，则有内存泄漏的隐患。
 
 Allocation Tracker跟踪内存分配情况：
+
 ![AllocationTracker.jpg](images/AllocationTracker.jpg)
 
 - **MAT（Memory Analyzer）**
