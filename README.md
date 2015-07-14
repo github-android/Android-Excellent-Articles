@@ -18,6 +18,7 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [优化android studio编译效率的方法](Android-Excellent-Articles/优化android%20studio编译效率的方法.md "优化android studio编译效率的方法.md")
 * [Android-APK瘦身方法](Android-Excellent-Articles/Android-APK瘦身方法.md "Android-APK瘦身方法.md")
 * [App崩溃分析：如何监控http请求并做出优化](Android-Excellent-Articles/App崩溃分析：如何监控http请求并做出优化.md "App崩溃分析：如何监控http请求并做出优化")
+* [如何提高你的代码质量](Android-Excellent-Articles/如何提高你的代码质量.md "如何提高你的代码质量")
 
 
 ## Open-Project-Analysis（开源项目分析） ##
