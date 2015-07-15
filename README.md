@@ -48,3 +48,4 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [Android性能优化之移动端网络优化](Android-Performance-Patterns-Analysis/android-performance-network "Android性能优化之移动端网络优化")
 * [Android应用性能评测调优](Android-Performance-Patterns-Analysis/android-app-performance-review-tuning "Android应用性能评测调优")
 * [Android性能优化之图片优化](Android-Performance-Patterns-Analysis/android-performance-optimization-image "Android性能优化之图片优化")
+* [Android性能优化之: 某些规范](Android-Performance-Patterns-Analysis/android-performance-some-rules "Android性能优化之: 某些规范")
