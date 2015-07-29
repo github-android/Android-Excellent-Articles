@@ -50,6 +50,7 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [Android应用性能评测调优](Android-Performance-Patterns-Analysis/android-app-performance-review-tuning "Android应用性能评测调优")
 * [Android性能优化之图片优化](Android-Performance-Patterns-Analysis/android-performance-optimization-image "Android性能优化之图片优化")
 * [Android性能优化之: 某些规范](Android-Performance-Patterns-Analysis/android-performance-some-rules "Android性能优化之: 某些规范")
+* [Android性能优化之: 如何检测和解决](Android-Performance-Patterns-Analysis/android-performance-detection-and-resolution "Android性能优化之: 如何检测和解决")
 
 ## Work-Experience（工作总结） ##
 * [通过Android trace文件分析死锁ANR](Android-Work-Experience/android_tracefile_deadlock_anr "通过Android trace文件分析死锁ANR")
