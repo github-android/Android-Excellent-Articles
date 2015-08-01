@@ -292,8 +292,7 @@ setContentView(R.layout.activity_overdraw_01);
 
 ok，一个简单的listview显示item，我们一共找出了6个不必要的背景，现在再看最后的Show GPU Overdraw 与最初的比较。
 
-![demo_on_show_gpu_overdraw.png](images/demo_on_show_gpu_overdraw.png)
-![demo_on_show_gpu_overdraw_last.png](images/demo_on_show_gpu_overdraw_last.png)
+![demo_on_show_gpu_overdraw_compare.png](images/demo_on_show_gpu_overdraw_compare.png)
 
 ok，对比参照图，基本已经达到了最优的状态。
 
@@ -307,8 +306,8 @@ ok，对比参照图，基本已经达到了最优的状态。
 
 下面通过一个实例来展示，那么首先看一个效果图：
 
-![clipRect_demo.png](images/clipRect_demo.png)
-![clipRect_demo_on_show_gpu_overdraw.png](images/clipRect_demo_on_show_gpu_overdraw.png)
+![clipRect_demo_on_show_gpu_overdraw_compare.png](images/clipRect_demo_on_show_gpu_overdraw_compare.png)
+
 
 左边显示的时效果图，右边显示的是开启Show Override GPU之后的效果，可以看到，卡片叠加处明显的过度渲染了。 (ps:我对这个View添加了一个背景色~~仔细看下面的代码） 
 
