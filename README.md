@@ -20,6 +20,7 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [App崩溃分析：如何监控http请求并做出优化](Android-Excellent-Articles/App崩溃分析：如何监控http请求并做出优化.md "App崩溃分析：如何监控http请求并做出优化")
 * [如何提高你的代码质量](Android-Excellent-Articles/如何提高你的代码质量.md "如何提高你的代码质量")
 * [Activity启动模式图文详解](Android-Excellent-Articles/Activity启动模式图文详解.md "Activity启动模式图文详解")
+* [开发一个Android App你需要知道的一些事](Android-Excellent-Articles/开发一个Android%20App你需要知道的一些事.md "开发一个Android App你需要知道的一些事")
 
 
 ## Open-Project-Analysis（开源项目分析） ##
