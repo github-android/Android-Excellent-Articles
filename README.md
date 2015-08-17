@@ -45,15 +45,16 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [Android性能优化之运算篇(Compute)](Android-Performance-Patterns-Analysis/android-performance-compute "Android性能优化之运算篇")
 * [Android性能优化之内存篇(Memory)](Android-Performance-Patterns-Analysis/android-performance-memory "Android性能优化之内存篇")
 * [Android性能优化之电量篇(Battery)](Android-Performance-Patterns-Analysis/android-performance-battery "Android性能优化之电量篇")
-* [Android性能优化之过渡绘制(Overdraw)](Android-Performance-Patterns-Analysis/android-performance-optimization-overdraw "Android性能优化之过渡绘制") </br>
-* [Android内存优化之MAT使用(MAT)](Android-Performance-Patterns-Analysis/android-performance-memory-usage-of-MAT "Android内存优化之MAT使用")  </br>
+* [Android性能优化之过渡绘制(Overdraw)](Android-Performance-Patterns-Analysis/android-performance-optimization-overdraw "Android性能优化之过渡绘制") 
 * [Android性能优化之数据库优化](Android-Performance-Patterns-Analysis/android-performance-database "Android性能优化之数据库优化")
 * [Android性能优化之移动端网络优化](Android-Performance-Patterns-Analysis/android-performance-network "Android性能优化之移动端网络优化")
-* [Android应用性能评测调优](Android-Performance-Patterns-Analysis/android-app-performance-review-tuning "Android应用性能评测调优")
 * [Android性能优化之图片优化](Android-Performance-Patterns-Analysis/android-performance-optimization-image "Android性能优化之图片优化")
 * [Android性能优化之: 某些规范](Android-Performance-Patterns-Analysis/android-performance-some-rules "Android性能优化之: 某些规范")
 * [Android性能优化之: 如何检测和解决](Android-Performance-Patterns-Analysis/android-performance-detection-and-resolution "Android性能优化之: 如何检测和解决")
 * [Android性能优化之: UI性能优化实战-识别绘制中的性能问题](Android-Performance-Patterns-Analysis/android-performance-ui-combat "Android性能优化之: UI性能优化实战-识别绘制中的性能问题")
+* [Android性能优化典范 - 第3季](Android-Performance-Patterns-Analysis/android-performance-season-3 "Android性能优化典范 - 第3季") 
+* [Android内存优化之MAT使用(MAT)](Android-Performance-Patterns-Analysis/android-performance-memory-usage-of-MAT "Android内存优化之MAT使用") 
+* [Android应用性能评测调优](Android-Performance-Patterns-Analysis/android-app-performance-review-tuning "Android应用性能评测调优")
 
 ## Work-Experience（工作总结） ##
 * [通过Android trace文件分析死锁ANR](Android-Work-Experience/android_tracefile_deadlock_anr "通过Android trace文件分析死锁ANR")
