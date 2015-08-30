@@ -59,5 +59,18 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [Android应用性能评测调优](Android-Performance-Patterns-Analysis/android-app-performance-review-tuning "Android应用性能评测调优")
 * [Android内存优化之:OnTrimMemory优化](Android-Performance-Patterns-Analysis/android-performance-onTrimMemory "Android内存优化之:OnTrimMemory优化")
 
+## Android源码设计模式分析[.](https://github.com/simple-android-framework-exchange/android_design_patterns_analysis "通过分析Android系统中的设计模式来提升大家对设计模式的理解，从源码的角度来剖析既增加了对Android系统本身的了解，也从优秀的设计中领悟模式的实际运用以及它适用的场景，避免在实际开发中的生搬硬套") ##
+* [单例模式](Android_Design_Patterns_Analysis/singleton "单例模式")
+* [Builder模式](Android_Design_Patterns_Analysis/builder "Builder模式")
+* [外观模式](Android_Design_Patterns_Analysis/facade "外观模式")
+* [模板方法](Android_Design_Patterns_Analysis/template-method "模板方法")
+* [策略模式](Android_Design_Patterns_Analysis/strategy "策略模式")
+* [代理模式](Android_Design_Patterns_Analysis/Proxy "代理模式")
+* [迭代器模式](Android_Design_Patterns_Analysis/iterator "迭代器模式")
+* [责任链模式](Android_Design_Patterns_Analysis/chain-of-responsibility "责任链模式")
+* [命令模式](Android_Design_Patterns_Analysis/command "命令模式")
+* [桥接模式](Android_Design_Patterns_Analysis/bridge "桥接模式")
+* [原型模式](Android_Design_Patterns_Analysis/prototype "原型模式")
+
 ## Work-Experience（工作总结） ##
 * [通过Android trace文件分析死锁ANR](Android-Work-Experience/android_tracefile_deadlock_anr "通过Android trace文件分析死锁ANR")
