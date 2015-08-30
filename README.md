@@ -59,7 +59,7 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [Android应用性能评测调优](Android-Performance-Patterns-Analysis/android-app-performance-review-tuning "Android应用性能评测调优")
 * [Android内存优化之:OnTrimMemory优化](Android-Performance-Patterns-Analysis/android-performance-onTrimMemory "Android内存优化之:OnTrimMemory优化")
 
-## Android源码设计模式分析[.](https://github.com/simple-android-framework-exchange/android_design_patterns_analysis "通过分析Android系统中的设计模式来提升大家对设计模式的理解，从源码的角度来剖析既增加了对Android系统本身的了解，也从优秀的设计中领悟模式的实际运用以及它适用的场景，避免在实际开发中的生搬硬套") ##
+## Android_Design_Patterns_Analysis(Android源码设计模式分析)[.](https://github.com/simple-android-framework-exchange/android_design_patterns_analysis "通过分析Android系统中的设计模式来提升对设计模式的理解，从源码的角度来剖析既增加了对Android系统本身的了解，也从优秀的设计中领悟模式的实际运用以及它适用的场景，避免在实际开发中的生搬硬套") ##
 * [单例模式](Android_Design_Patterns_Analysis/singleton "单例模式")
 * [Builder模式](Android_Design_Patterns_Analysis/builder "Builder模式")
 * [外观模式](Android_Design_Patterns_Analysis/facade "外观模式")
