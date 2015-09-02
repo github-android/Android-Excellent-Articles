@@ -3,7 +3,7 @@ Android性能优化之:内存优化建议
 
 * [Android官方优化篇](#google)
 * [Android资源优化篇](#resource)
-* [java代码优化篇](#Java)
+* [java代码优化篇](#java)
 
 
 <a name="google"/>
@@ -343,7 +343,7 @@ try {
 
 ```java
 public View getView(int position, View convertView, ViewGroup parent)
-```
+```ja
 
 来向ListView提供每一个item所需要的view对象。初始时ListView会从BaseAdapter中根据当前的屏幕布局实例化一定数量的view对象，同时ListView会将这些view对象缓存起来。当向上滚动ListView时，原先位于最上面的list item的view对象会被回收，然后被用来构造新出现的最下面的list item。这个构造过程就是由getView()方法完成的，getView()的第二个形参 View convertView就是被缓存起来的list item的view对象(初始化时缓存中没有view对象则convertView是null)。
 
