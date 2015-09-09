@@ -10,6 +10,7 @@ Java习惯用法总结[.](http://www.jcodecraeer.com/a/chengxusheji/java/2015/06
 * [hashCode()](#hashCode)
 * [compareTo()](#compareTo)
 * [clone()](#clone)
+
 #### 应用：
 * [StringBuilder/StringBuffer()](#StringBuilder/StringBuffer)
 * [Random.nextInt(int)](#Random.nextInt(int))
@@ -17,23 +18,27 @@ Java习惯用法总结[.](http://www.jcodecraeer.com/a/chengxusheji/java/2015/06
 * [StringBuilder.reverse()](#StringBuilder.reverse)
 * [Thread/Runnable](#Thread/Runnable)
 * [try-finally](#try-finally)
+
 #### 输入/输出：
 * [从输入流里读取字节数据](#InputStream_read1)
 * [从输入流里读取块数据](#InputStream_read2)
 * [从文件里读取文本](#BufferedReader_read1)
 * [向文件里写文本](#PrintWriter)
+
 #### 预防性检测：
 * [数值](#DefensiveCheckingInt)
 * [对象](#DefensiveCheckingObj)
 * [数组索引](#DefensiveCheckingArrayIndex)
 * [数组区间](#DefensiveCheckingArrayLength)
-#### 数组： ####
-[填充元素](#fillArray)
-[复制一个范围内的数组元素](#coppyArray)
-[调整数组大小](#arrageArray)
+
+#### 数组：
+* [填充元素](#fillArray)
+* [复制一个范围内的数组元素](#coppyArray)
+* [调整数组大小](#arrageArray)
+
 #### 包装: ####
-[个字节包装成一个int](#packing_int)
-[分解成4个字节](#unpacking_int)
+* [个字节包装成一个int](#packing_int)
+* [分解成4个字节](#unpacking_int)
 
 <a name="equals"/>
 ### 实现equals() ###
@@ -62,7 +67,7 @@ class Person {
 * foo.equals(null) 必须返回false，不能抛NullPointerException。（注意，null instanceof 任意类 总是返回false，因此上面的代码可以运行。）
 * 基本类型域（比如，int）的比较使用 == ，基本类型数组域的比较使用Arrays.equals()。</br>
 * 覆盖equals()时，记得要相应地覆盖 hashCode()，与 equals() 保持一致。
-* 参考： [java.lang.Object.equals(Object](http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object))。
+* 参考： [java.lang.Object.equals(Object)](http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object))。
 
 <a name="hashCode"/>
 ### 实现hashCode() ###
@@ -85,7 +90,7 @@ class Person {
 * 根据逆反命题,如果x.hashCode() != y.hashCode(),那么x.equals(y) == false 必定成立。
 * 你不需要保证，当x.equals(y) == false时，x.hashCode() != y.hashCode()。但是，如果你可以尽可能地使它成立的话，这会提高哈希表的性能。
 * hashCode()最简单的合法实现就是简单地return 0；虽然这个实现是正确的，但是这会导致HashMap这些数据结构运行得很慢。
-* 参考：[java.lang.Object.hashCode()](http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#hashCode()。
+* 参考：[java.lang.Object.hashCode()](http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#hashCode())。
 
 <a name="compareTo"/>
 ### 实现compareTo() ###
@@ -113,7 +118,7 @@ class Person implements Comparable<Person> {
 
 * 总是实现泛型版本 Comparable 而不是实现原始类型 Comparable 。因为这样可以节省代码量和减少不必要的麻烦。
 * 只关心返回结果的正负号（负/零/正），它们的大小不重要。
-* [Comparator.compare()](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html#compare(T, T)的实现与这个类似。
+* [Comparator.compare()](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html#compare(T, T))的实现与这个类似。
 * 参考：[java.lang.Comparable](http://docs.oracle.com/javase/6/docs/api/java/lang/Comparable.html)。
 
 <a name="clone"/>
@@ -143,7 +148,7 @@ class Values implements Cloneable {
 * 手动对所有的非基本类型域（对象和数组）进行深度复制（deep copy）。
 * 实现了Cloneable的类，clone()方法永远不要抛CloneNotSupportedException。因此，需要捕获这个异常并忽略它，或者使用不受检异常（unchecked exception）包装它。
 * 不使用Object.clone()方法而是手动地实现clone()方法是可以的也是合法的。
-* 参考：[java.lang.Object.clone()](http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#clone()、[java.lang.Cloneable()](http://docs.oracle.com/javase/6/docs/api/java/lang/Cloneable.html)。
+* 参考：[java.lang.Object.clone()](http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#clone())、[java.lang.Cloneable()](http://docs.oracle.com/javase/6/docs/api/java/lang/Cloneable.html)。
 
 <a name="StringBuilder/StringBuffer"/>
 ### 使用StringBuilder或StringBuffer ###
@@ -179,7 +184,7 @@ int diceRoll() {
 
 * 总是使用Java API方法去生成一个整数范围内的随机数。
 * 不要试图去使用 Math.abs(rand.nextInt()) % n 这些不确定的用法，因为它的结果是有偏差的。此外，它的结果值有可能是负数，比如当rand.nextInt() == Integer.MIN_VALUE时就会如此。
-* 参考：[java.util.Random.nextInt(int)](http://docs.oracle.com/javase/6/docs/api/java/util/Random.html#nextInt(int)。
+* 参考：[java.util.Random.nextInt(int)](http://docs.oracle.com/javase/6/docs/api/java/util/Random.html#nextInt(int))。
 
 <a name="Iterator.remove"/>
 ### 使用Iterator.remove() ###
@@ -194,7 +199,7 @@ void filter(List<String> list) {
 ```
 
 * remove()方法作用在next()方法最近返回的条目上。每个条目只能使用一次remove()方法。
-* 参考：[java.util.Iterator.remove()](http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html#remove()。
+* 参考：[java.util.Iterator.remove()](http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html#remove())。
 
 <a name="StringBuilder.reverse"/>
 ### 返转字符串 ###
@@ -205,7 +210,7 @@ String reverse(String s) {
 ```
 
 * 这个方法可能应该加入Java标准库。
-* 参考：[java.lang.StringBuilder.reverse()](http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuilder.html#reverse()。
+* 参考：[java.lang.StringBuilder.reverse()](http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuilder.html#reverse())。
 
 <a name="Thread/Runnable"/>
 ### 启动一条线程 ###
@@ -297,7 +302,7 @@ try {
 ```
 
 * read()方法要么返回下一次从流里读取的字节数（0到255，包括0和255），要么在达到流的末端时返回-1。
-* 参考：[java.io.InputStream.read()](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html#read()。
+* 参考：[java.io.InputStream.read()](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html#read())。
 
 <a name="InputStream_read2"/>
 ### 从输入流里读取块数据 ###
@@ -317,7 +322,7 @@ try {
 ```
 
 * 要记住的是，read()方法不一定会填满整个buf，所以你必须在处理逻辑中考虑返回的长度。
-* 参考： [java.io.InputStream.read(byte[])](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html#read(byte[])、[java.io.InputStream.read(byte[], int, int)](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html#read(byte[], int, int)。
+* 参考： [java.io.InputStream.read(byte[])](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html#read(byte[]))、[java.io.InputStream.read(byte[], int, int)](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html#read(byte[], int, int))。
 
 <a name="BufferedReader_read1"/>
 ### 从文件里读取文本 ###
@@ -433,8 +438,8 @@ for (int i = 0; i < a.length; i++)
 
 （优先）使用标准库的方法： `Arrays.fill(a, (byte)123)`;
 
-* 参考：[java.util.Arrays.fill(T[], T)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#fill(byte[], byte)。
-* 参考：[java.util.Arrays.fill(T[], int, int, T)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#fill(byte[], int, int, byte)。
+* 参考：[java.util.Arrays.fill(T[], T)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#fill(byte[], byte))。
+* 参考：[java.util.Arrays.fill(T[], int, int, T)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#fill(byte[], int, int, byte))。
 
 <a name="coppyArray"/>
 ### 复制一个范围内的数组元素 ###
@@ -451,7 +456,7 @@ for (int i = 0; i < 8; i++)
 
 （优先）使用标准库的方法：`System.arraycopy(a, 3, b, 6, 8)`;
 
-* 参考：[java.lang.System.arraycopy(Object, int, Object, int, int)](http://docs.oracle.com/javase/6/docs/api/java/lang/System.html#arraycopy(java.lang.Object, int, java.lang.Object, int, int)。
+* 参考：[java.lang.System.arraycopy(Object, int, Object, int, int)](http://docs.oracle.com/javase/6/docs/api/java/lang/System.html#arraycopy(java.lang.Object, int, java.lang.Object, int, int))。
 
 <a name="arrageArray"/>
 ### 调整数组大小 ###
@@ -477,8 +482,8 @@ a = b;
 
 （优先）使用标准库的方法： `a = Arrays.copyOf(a, newLen)`;
 
-* 参考：[java.util.Arrays.copyOf(T[], int)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#copyOf(byte[], int)。
-* 参考：[java.util.Arrays.copyOfRange(T[], int, int)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#copyOfRange(byte[], int, int)。
+* 参考：[java.util.Arrays.copyOf(T[], int)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#copyOf(byte[], int))。
+* 参考：[java.util.Arrays.copyOfRange(T[], int, int)](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html#copyOfRange(byte[], int, int))。
 
 <a name="packing_int"/>
 ### 把4个字节包装（packing）成一个int ###
