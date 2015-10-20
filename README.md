@@ -60,7 +60,7 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 * [Android内存优化之:OnTrimMemory优化](Android-Performance-Patterns-Analysis/android-performance-onTrimMemory "Android内存优化之:OnTrimMemory优化")
 * [Android性能优化之:内存优化建议](Android-Performance-Patterns-Analysis/android-performance-memory-optimization-suggestions "Android性能优化之:内存优化建议")
 
-## Android_Design_Patterns_Analysis(Android源码设计模式分析)[.](https://github.com/simple-android-framework-exchange/android_design_patterns_analysis "通过分析Android系统中的设计模式来提升对设计模式的理解，从源码的角度来剖析既增加了对Android系统本身的了解，也从优秀的设计中领悟模式的实际运用以及它适用的场景，避免在实际开发中的生搬硬套") ##
+## Design_Patterns_Analysis(Android源码设计模式分析)[.](https://github.com/simple-android-framework-exchange/android_design_patterns_analysis "通过分析Android系统中的设计模式来提升对设计模式的理解，从源码的角度来剖析既增加了对Android系统本身的了解，也从优秀的设计中领悟模式的实际运用以及它适用的场景，避免在实际开发中的生搬硬套") ##
 * [单例模式](Android_Design_Patterns_Analysis/singleton "单例模式")
 * [Builder模式](Android_Design_Patterns_Analysis/builder "Builder模式")
 * [外观模式](Android_Design_Patterns_Analysis/facade "外观模式")
@@ -75,3 +75,7 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 
 ## Work-Experience（工作总结） ##
 * [通过Android trace文件分析死锁ANR](Android-Work-Experience/android_tracefile_deadlock_anr "通过Android trace文件分析死锁ANR")
+
+## Interview-Question（面试问题） ##
+* [IOS常见面试问题](https://github.com/ChenYilong/iOSInterviewQuestions "IOS常见面试问题")
+* [Android常见面试问题](Android-Interview-Question/Android-Interview-Question "Android常见面试问题")
