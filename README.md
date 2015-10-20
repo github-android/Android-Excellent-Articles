@@ -78,4 +78,4 @@ Android优秀文章收集、整理、分享、记录。希望每天都学习记�
 
 ## Interview-Question（面试问题） ##
 * [IOS常见面试问题](https://github.com/ChenYilong/iOSInterviewQuestions "IOS常见面试问题")
-* [Android常见面试问题](Android-Interview-Question/Android-Interview-Question "Android常见面试问题")
+* [Android常见面试问题](Android-Interview-Question "Android常见面试问题")
