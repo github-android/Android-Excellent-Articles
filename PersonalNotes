@@ -1,0 +1,204 @@
+wifi密码：szwx@alipay
+
+快捷键 ctrl+shift+R
+getprop：adb shell getprop
+过滤文件内部的内容：grep -rn "wifi_tether_configure_ssid_default" ./
+
+git clone ssh://guohui.mgh@gerrit3.alibaba-inc.com:29418/code/os/aliyunos/packages/apps/YunCarConnect && scp -p -P 29418 guohui.mgh@gerrit3.alibaba-inc.com:hooks/commit-msg YunCarConnect/.git/hooks/
+git clone ssh://guohui.mgh@gerrit3.alibaba-inc.com:29418/code/platform/packages/apps/Settings && scp -p -P 29418 guohui.mgh@gerrit3.alibaba-inc.com:hooks/commit-msg Settings/.git/hooks/
+git checkout -b 2010614_dev origin/dev_yunos
+git checkout -b V2.5_201600824 origin/dev_android
+
+git rebase origin/dev_yunos
+git status
+git add .
+
+git commit -m "BugID:8403288:fix bluueTooth some show bugs"
+git commit -m "BugID:8403288:add app monitor to save local file"
+
+git push origin HEAD:refs/for/dev_yunos（HEAD表示当前节点）
+git push origin HEAD:refs/for/dev_android
+git push origin HEAD:refs/for/mt8735_pb5.0.2_anytek
+git push yunos HEAD:refs/for/mt8735_pb5.0.2_anytek
+
+
+git checkout -b 2_HTML remotes/origin/mt8735_pb5.0.2_anytek
+git pull --rebase (从远程服务器同步最新代码)
+git checkout ./ 当前所有修改全部恢复
+git  remote -v 显示当前仓库名称
+
+git log -p 选项 展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新：
+git log -p -2
+git log --stat 仅简要的显示 文件 增改行数统计，每个提交都列出了修改过的文件，以及其中添加和移除的行数，并在最后列出所有增减行数小计。
+git log --author=haiwang 仅显示指定作者相关的提交
+
+查看Git全局设置信息：git config -l
+
+
+Git 打 tag
+git tag -a V1.0.0 -m "Relase version V1.0.0"
+git push origin V1.0.0
+git config --global user.name "wguohui.mgh"  
+
+===========================linux 常用命令=================================
+[root@Linux var]# df -hl 
+文件系统              容量  已用 可用 已用% 挂载点
+/dev/hdb2              75G   75G     0 100% /
+/dev/hdb1              99M  9.2M   85M  10% /boot
+none                  251M     0  251M   0% /dev/shm
+
+用以下命令查看单个目录
+# du -bs dir_name
+
+
+初窥Linux 之 我最常用的20条命令：
+http://blog.csdn.net/ljianhui/article/details/11100625
+
+总结自己的Git常用命令:
+http://www.cnblogs.com/lwzz/archive/2013/02/23/2921426.html
+
+===========================server git配置过程=============================
+guohui.mgh@r10g07484:~$ vim ~/.gitconfig
+guohui.mgh@r10g07484:~$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/guohui.mgh/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/guohui.mgh/.ssh/id_rsa.
+Your public key has been saved in /home/guohui.mgh/.ssh/id_rsa.pub.
+The key fingerprint is:
+c4:64:4a:de:c8:ac:65:c3:04:c0:e3:ec:7e:38:0d:2f guohui.mgh@r10g07484.sqa.zmf
+The key's randomart image is:
+...
+guohui.mgh@r10g07484:~$ cd ~/.ssh/
+guohui.mgh@r10g07484:~/.ssh$ ssh-add id_rsa
+Could not open a connection to your authentication agent.
+guohui.mgh@r10g07484:~/.ssh$ ssh-add id_rsa
+Could not open a connection to your authentication agent.
+guohui.mgh@r10g07484:~/.ssh$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZOMn306Rz5T0Rp3tmmjfxrXzSbZEmjqIJbseqRnIH8yc8B+uOJ/gW3Sj6M+QaM4kmVbxcBuqC6xTifwbsapVBduzrgmIXJTLwE7ZwaB4HoG+Ea3DkIAwO9Scyy31smsfp0Y3TUo2HdG4AXgFD+ZkMTIhqWS+Kjj/47J3xF5QNpGy32z52s4zXnR+wtMUxVNhKnX1pD/vnw0iXNu4LW7dpV6t3hDGjoOmf/pE478jgoeg8ZFxkKoC+Ra4TGBwy4ZQ7NyO94Biyg8gJk+BEKXbaE2pbPb8Af/rOj4FmDdK0vMEZRMvWAoN2IqLY2TjOEUl06v9dpFjiq+dRztCwI98D guohui.mgh@r10g07484.sqa.zmf
+guohui.mgh@r10g07484:~/.ssh$ cd
+guohui.mgh@r10g07484:~$ vim ~/.ssh/config
+guohui.mgh@r10g07484:~$ ssh -p 29418 guohui.mgh@gerrit3.alibaba-inc.com
+The authenticity of host '[gerrit3.alibaba-inc.com]:29418 ([10.195.33.253]:29418)' can't be established.
+RSA key fingerprint is b1:44:02:04:18:cf:81:5a:0f:89:62:94:97:4f:5a:7a.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[gerrit3.alibaba-inc.com]:29418,[10.195.33.253]:29418' (RSA) to the list of known hosts.
+
+  ****    Welcome to Gerrit Code Review    ****
+
+Connection to gerrit3.alibaba-inc.com closed.
+guohui.mgh@r10g07484:~$
+
+
+给用户设置权限
+sudo chown -R guohui.mgh:users *  || sudo chown -R guohui.mgh:users maguohui || ll
+
+repo init -u ssh://guohui.mgh@gerrit3.alibaba-inc.com:29418/repo/yunos/pad -b mt6735_pb5.0.2_yunovo_tron_t8
+repo init -u ssh://guohui.mgh@gerrit3.alibaba-inc.com:29418/repo/yunos/pad -b rel_mt6735_pb5.0.2_yunovo_tron_t8
+repo init -u ssh://guohui.mgh@gerrit3.alibaba-inc.com:29418/repo/yunos/pad -b mt8735_pb5.0.2_anytek
+repo init -u ssh://guohui.mgh@gerrit3.alibaba-inc.com:29418/repo/yunos/pad -b mt8665_pb5.0.2_reacheng_xyi
+
+repo sync -c
+repo sync -c -j24  -c(current 当前分之) -j(jobs 多线程下载 把资源沾满)
+
+
+编译: ./mk_aliphone.sh --> 6(6735）-->3(userdebug)-->1(adb)-->2(new)
+mmm:  source build/envsetup.sh-->lunch-->16-->mmm aliyunos/packages/apps/account/
+打包: ./imgout k92_1280x400
+配置宏：/device/alibaba/common$ vim device.mk
+查看配置项目：vim .repo/manifests/default.xml
+
+
+配置环境变量
+vim ~/.bashrc
+--------------------------------------------------
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JRE_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre
+export PATH="$PATH:$JAVA_HOME/bin:$JRE_HOME/bin"
+--------------------------------------------------
+source ~/.bashrc
+
+
+adb -s devicesName logcat ......  （-s区分设备名字）
+adb root  adb remount
+
+vi & vim
+=====================================================
+y 在选择模式下复制
+d 在选择模式下删除
+dd 删除当前行
+yy 复制当前行
+p  自动在下一行黏贴/
+v 进入选择模式
+h 左移光标 l 右 j 下 k 上
+cw 删除当前字母并进入插入模式
+u 撤回操作
+v-移动光标选择文本 y-复制  -移动光标 - p黏贴
+
+vi或者vim 打开编辑窗口
+esc->:vsp fileName  在当前窗口竖着平铺打开一个新窗口  hsp垂直打开
+
+搜索：命令模式下输入“/字符串”，例如“/Section 3”。如果查找下一个，按“n”即可。
+vi模式下，gg返回顶部，shift+g到底部。
+h :光标左移一个字符
+l :光标右移一个字符
+space:光标右移一个字符
+Backspace:光标左移一个字符
+k或Ctrl p:光标上移一行
+j或Ctrl n :光标下移一行
+Enter :光标下移一行
+w或W :光标右移一个字至字首
+b或B :光标左移一个字至字首
+e或E :光标右移一个字至字尾
+) :光标移至句尾
+( :光标移至句首
+}:光标移至段落开头
+{:光标移至段落结尾
+nG:光标移至第n行首
+n :光标下移n行
+n-:光标上移n行
+n$:光标移至第n行尾
+H :光标移至屏幕顶行
+M :光标移至屏幕中间行
+L :光标移至屏幕行
+0:（注意是数字零）光标移至当前行首
+$:光标移至当前行尾
+
+屏幕翻滚类命令
+
+Ctrl u:向文件首翻半屏
+Ctrl d:向文件尾翻半屏
+Ctrl f:向文件尾翻一屏
+Ctrl＋b；向文件首翻一屏
+nz:将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。
+
+窗口相关操作：
+======================
+screen -S abcd  创建一个screen
+screen -ls 显示当前所有窗口
+screen -r 4646.abcd  进入指定窗口
+screen -S session_name -X quit   kill调一个窗口
+screen -r session_name 激活一个窗口
+ctrl+a 同时按 在按d 退出
+
+
+透明度计算，百分比和十六进制对应关系  :http://blog.163.com/www_iloveyou_com/blog/static/211658372201591694456331/
+
+可以把本地版本手动改成低版本
+1.adb pull /system/build.prop  . 
+2. 修改build.prop  ro.yunos.build.version=3.2.2-E-20160819.1016  改成早一点的版本，服务器有的。
+3.adb push build.prop       /system/build.prop
+4.adb shell     
+5.chmod 644 /system/build.prop
+重启,可以在设置里面关于本机看到版本已变更
+
+C:\Users\biaoxian.hbx>adb shell
+root@k84_1280x480:/ # ps | grep "gesture"
+system    1785  300   1016432 40700 ffffffff f72e95ac S com.yunos.gesturecontrol
+root@k84_1280x480:/ # kill 1785
+root@k84_1280x480:/ #
+
+find . -name "*.xml"  过滤当前目录.xml的文件
+find . -name "*.xml" | xargs grep "status"  过滤当前目录包含status字段.xml的文件
+grep -rn "status" ./ 查询status的文件
